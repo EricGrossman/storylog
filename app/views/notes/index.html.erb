@@ -1,0 +1,28 @@
+<h1>Notes for <%= @episode.title %></h1>
+<% if !@episode.notes.empty? %>
+<table>
+  <tr>
+    <th>Note text</th>
+    <th>Episode</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @notes.each do |note| %>
+  <tr>
+    <td><%= note.note_text %></td>
+    <td><%= note.episode_id %></td>
+    <td><%= link_to 'Show', [@program, @episode, note] %></td>
+    <td><%= link_to 'Edit', edit_program_episode_note_path(@program, @episode, note) %></td>
+    <td><%= link_to 'Destroy', [@program, @episode, note], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<% else %>
+  <p>This episode has no notes.</p>
+<% end %>
+<%= link_to 'New Note', new_program_episode_note_path(@program, @episode) %>
+<%= link_to 'Back', program_episode_path(@program, @episode) %>

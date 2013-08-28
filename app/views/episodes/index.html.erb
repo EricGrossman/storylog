@@ -1,0 +1,34 @@
+<h1>Listing episodes / <%= @program.name %></h1>
+<% if !@program.episodes.empty? %>
+<table>
+  <tr>
+    <th>Program</th>
+    <th>Title</th>
+    <th>Rating</th>
+    <th>Synopsis</th>
+    <th></th>
+    <th></th>
+    <th></th>
+	<th></th>
+  </tr>
+
+<% @episodes.each do |episode| %>
+  <tr>
+    <td><%= episode.program.name %></td>
+    <td><%= episode.title %></td>
+    <td><%= episode.rating %></td>
+    <td><%= episode.synopsis %></td>
+    <td><%= link_to 'Show', [@program, episode] %></td>
+    <td><%= link_to 'Edit', edit_program_episode_path(@program, episode) %></td>
+	<td><%= link_to 'Notes', program_episode_notes_path(@program, episode) %></td>
+    <td><%= link_to 'Destroy', [@program, episode], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<% else %>
+  <p>There are no <%= @program.name %> episodes.</p>
+<% end %>
+
+<%= link_to 'New Episode', new_program_episode_path %>

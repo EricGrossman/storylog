@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @program.name %>
+</p>
+<p>
+<b>Photo:</b>
+<% if @program.has_photo? %>
+  <%= image_tag @program.photo_path %>
+<% else %>
+  No photo.
+<% end %>
+</p>
+
+<%= link_to 'Edit', edit_program_path(@program) %> |
+
+<%= link_to 'Episodes', program_episodes_path(@program) %> |
+
+<%= link_to 'Back', programs_path %>

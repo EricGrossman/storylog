@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Note text:</b>
+  <%= @note.note_text %>
+</p>
+
+<p>
+  <b>Episode:</b>
+  <%= @note.episode_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_program_episode_note_path(@program, @episode, @note) %> |
+<%= link_to 'Back', program_episode_notes_path(@program, @episode) %>

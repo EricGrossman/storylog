@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Program:</b>
+  <%= @episode.program.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @episode.title %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @episode.rating %>
+</p>
+
+<p>
+  <b>Synopsis:</b>
+  <%= @episode.synopsis %>
+</p>
+
+
+<%= link_to 'Edit', edit_program_episode_path(@program, @episode) %> |
+
+<%= link_to 'Notes', program_episode_notes_path(@program, @episode) %> |
+
+<%= link_to 'Back', program_episodes_path(@program) %>
