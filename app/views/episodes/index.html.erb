@@ -1,8 +1,7 @@
-<h1>Episodes / <%= @program.name %></h1>
+<h2>Episodes / <%= @program.name %></h2>
 <% if !@program.episodes.empty? %>
 <table class="table table-hover">
   <tr>
-    <th>Program</th>
     <th>Title</th>
     <th>Rating</th>
     <th>Synopsis</th>
@@ -14,7 +13,6 @@
 
 <% @episodes.each do |episode| %>
   <tr>
-    <td><%= episode.program.name %></td>
     <td><%= episode.title %></td>
     <td><%= episode.rating %></td>
     <td><%= episode.synopsis %></td>
