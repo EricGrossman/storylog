@@ -18,10 +18,10 @@
     <td><%= episode.title %></td>
     <td><%= episode.rating %></td>
     <td><%= episode.synopsis %></td>
-    <td><%= link_to 'Show', [@program, episode] %></td>
-    <td><%= link_to 'Edit', edit_program_episode_path(@program, episode) %></td>
-	<td><%= link_to 'Notes', program_episode_notes_path(@program, episode) %></td>
-    <td><%= link_to 'Destroy', [@program, episode], confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', [@program, episode], class: "btn btn-primary" %></td>
+    <td><%= link_to 'Edit', edit_program_episode_path(@program, episode), class: "btn btn-primary" %></td>
+	<td><%= link_to 'Notes', program_episode_notes_path(@program, episode), class: "btn btn-primary" %></td>
+    <td><%= link_to 'Destroy', [@program, episode], class: "btn btn-danger", confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

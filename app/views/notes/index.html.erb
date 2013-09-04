@@ -13,9 +13,9 @@
   <tr>
     <td><%= note.note_text %></td>
     <td><%= note.episode_id %></td>
-    <td><%= link_to 'Show', [@program, @episode, note] %></td>
-    <td><%= link_to 'Edit', edit_program_episode_note_path(@program, @episode, note) %></td>
-    <td><%= link_to 'Destroy', [@program, @episode, note], confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', [@program, @episode, note], class: "btn btn-primary" %></td>
+    <td><%= link_to 'Edit', edit_program_episode_note_path(@program, @episode, note), class: "btn btn-primary" %></td>
+    <td><%= link_to 'Destroy', [@program, @episode, note], class: "btn btn-danger", confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
