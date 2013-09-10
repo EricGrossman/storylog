@@ -1,6 +1,6 @@
-<h1>Editing episode</h1>
+<h3>Editing episode</h3>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', [@program, @episode] %> |
-<%= link_to 'Back', program_episodes_path(@program) %>
+<%= link_to 'Show', [@program, @episode], class: "btn btn-primary" %> 
+<%= link_to 'Back', program_episodes_path(@program), class: "btn btn-primary" %>
