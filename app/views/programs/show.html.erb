@@ -13,8 +13,8 @@
 <% end %>
 </p>
 
-<%= link_to 'Edit', edit_program_path(@program) %> |
+<%= link_to 'Edit', edit_program_path(@program), class: "btn btn-primary" %> 
 
-<%= link_to 'Episodes', program_episodes_path(@program) %> |
+<%= link_to 'Episodes', program_episodes_path(@program), class: "btn btn-primary" %> 
 
-<%= link_to 'Back', programs_path %>
+<%= link_to 'Back', programs_path, class: "btn btn-primary" %>

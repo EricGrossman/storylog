@@ -29,6 +29,8 @@
     <%= f.text_field :synopsis %>
   </div>
   <div class="actions">
+    <% if logged_in? %>
     <%= f.submit %>
+	<% end %>
   </div>
 <% end %>

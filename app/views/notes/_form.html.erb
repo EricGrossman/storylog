@@ -20,6 +20,8 @@
     <%= f.number_field :episode_id %>
   </div>-->
   <div class="actions">
+    <% if logged_in? %>
     <%= f.submit %>
+	<% end %>
   </div>
 <% end %>

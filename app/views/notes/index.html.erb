@@ -27,5 +27,5 @@
 <% else %>
   <p>This episode has no notes.</p>
 <% end %>
-<%= link_to 'New Note', new_program_episode_note_path(@program, @episode) %>
-<%= link_to 'Back', program_episode_path(@program, @episode) %>
+<%= link_to 'New Note', new_program_episode_note_path(@program, @episode), class: "btn btn-primary" %>
+<%= link_to 'Back', program_episode_path(@program, @episode), class: "btn btn-primary" %>

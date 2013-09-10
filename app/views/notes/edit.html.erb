@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', [@program, @episode, @note] %> |
-<%= link_to 'Back', program_episode_notes_path(@program, @episode) %>
+<%= link_to 'Show', [@program, @episode, @note], class: "btn btn-primary" %> 
+<%= link_to 'Back', program_episode_notes_path(@program, @episode), class: "btn btn-primary" %>

@@ -35,5 +35,5 @@
   <p>There are no <%= @program.name %> episodes.</p>
 <% end %>
 
-<%= link_to 'New Episode', new_program_episode_path %> |
-<%= link_to 'Back', programs_path %>
+<%= link_to 'New Episode', new_program_episode_path, class: "btn btn-primary" %> 
+<%= link_to 'Back', programs_path, class: "btn btn-primary" %>
