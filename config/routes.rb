@@ -1,6 +1,8 @@
 Storylog::Application.routes.draw do
 
   root :to => "programs#index"
+  match "/auth/:provider/callback" => "sessions#create"
+  match "/logout" => "sessions#destroy", :as => "logout"
   
   resources :users
 
@@ -9,8 +11,7 @@ Storylog::Application.routes.draw do
 	  resources :notes
 	end
   end
-  match "/auth/:provider/callback" => "sessions#create"
-  match "/logout" => "sessions#destroy", :as => "logout"
+  
   
   #resources :programs do
     #resources :episodes

@@ -15,7 +15,7 @@ class EpisodesController < ApplicationController
 
   # GET /episodes/1
   # GET /episodes/1.json
-  def show
+  def show  
     @episode = @program.episodes.find(params[:id])
 
     respond_to do |format|
