@@ -2,8 +2,7 @@
 <% if !@episode.notes.empty? %>
 <table class="table table-hover">
   <tr>
-    <th>Note text</th>
-    <th>Episode</th>
+    <th>Note</th>    
     <th></th>
     <th></th>
     <th></th>
@@ -11,11 +10,15 @@
 
 <% @notes.each do |note| %>
   <tr>
-    <td><%= note.note_text %></td>
-    <td><%= note.episode_id %></td>
-    <td><%= link_to 'Show', [@program, @episode, note], class: "btn btn-primary" %></td>
+    <td><%= note.note_text %></td>    
+	<td><%= link_to 'Show', [@program, @episode, note], class: "btn btn-primary" %></td>
+	<% if logged_in? %>    
     <td><%= link_to 'Edit', edit_program_episode_note_path(@program, @episode, note), class: "btn btn-primary" %></td>
     <td><%= link_to 'Destroy', [@program, @episode, note], class: "btn btn-danger", confirm: 'Are you sure?', method: :delete %></td>
+    <% else %>
+    <td><%= link_to 'Edit', edit_program_episode_note_path(@program, @episode, note), class: "btn btn-primary disabled" %></td>
+    <td><%= link_to 'Destroy', [@program, @episode, note], class: "btn btn-danger disabled", method: :delete %></td>
+	<% end %>
   </tr>
 <% end %>
 </table>
