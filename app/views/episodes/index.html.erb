@@ -1,4 +1,5 @@
 <h3>Episodes / <%= @program.name %></h3>
+<div class="row-fluid">
 <% if !@program.episodes.empty? %>
 <table class="table table-hover">
   <tr>
@@ -37,3 +38,4 @@
 
 <%= link_to 'New Episode', new_program_episode_path, class: "btn btn-primary" %> 
 <%= link_to 'Back', programs_path, class: "btn btn-primary" %>
+</div>
