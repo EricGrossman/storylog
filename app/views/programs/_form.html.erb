@@ -22,7 +22,7 @@
   </div>
   
   <div class="actions">
-    <% if logged_in? %>
+    <% if logged_in? && authorized? %>
     <%= f.submit %>
 	<% end %>
   </div>

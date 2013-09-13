@@ -18,7 +18,7 @@
     <td><%= episode.rating %></td>
     <td><%= episode.synopsis %></td>
     <td><%= link_to 'Show', [@program, episode], class: "btn btn-primary" %></td>
-	<% if logged_in? %>
+	<% if logged_in? && authorized? %>
     <td><%= link_to 'Edit', edit_program_episode_path(@program, episode), class: "btn btn-primary" %></td>
 	<td><%= link_to 'Notes', program_episode_notes_path(@program, episode), class: "btn btn-primary" %></td>
     <td><%= link_to 'Destroy', [@program, episode], class: "btn btn-danger", confirm: 'Are you sure?', method: :delete %></td>

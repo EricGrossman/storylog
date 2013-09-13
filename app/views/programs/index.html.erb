@@ -26,7 +26,7 @@
     <td><%= program.name %></td>
 	<td><%= program.episodes.count %></td>
     <td><%= link_to 'Show', program, class: "btn btn-primary" %></td>
-	<% if logged_in? %>
+	<% if logged_in? && authorized? %>
     <td><%= link_to 'Edit', edit_program_path(program), class: "btn btn-primary" %></td>
     <td><%= link_to 'Destroy', program, class: "btn btn-danger", confirm: 'Are you sure?', method: :delete %></td>
     <% else %>
