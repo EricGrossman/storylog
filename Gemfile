@@ -2,6 +2,11 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
 gem 'bootstrap-sass', '2.3.2.2'
+#Gems for adding cloud image storage
+#to Story Log using Paperclip and 
+#Amazon S3.
+gem 'paperclip'
+gem 'aws-sdk'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
