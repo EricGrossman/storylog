@@ -9,36 +9,27 @@
   <%= favicon_link_tag %>
 </head>
 <body>
-
-
 <div class="container">
-    <div class="navbar">
+  <div class="navbar">
     <div class="navbar-inner">
-    <a class="brand" href="#">Story Log</a>
-    <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="http://ericgrossman.github.io/storylog/">About</a></li>
-              <li><a href="mailto:mail@eric-grossman.net">Contact</a></li>
-			  <% if current_user %>			  
-			  <li><%= link_to "Logout", logout_path %></li>
-			  <% else %>
-			  <li><%= link_to "Login", "/auth/identity" %></li>
-			  <% end %>			  
-            
-    </ul>
+      <a class="brand" href="#">Story Log</a>
+      <ul class="nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="http://ericgrossman.github.io/storylog/">About</a></li>
+      <li><a href="mailto:mail@eric-grossman.net">Contact</a></li>
+      <% if current_user %>			  
+        <li><%= link_to "Logout", logout_path %></li>
+      <% else %>
+        <li><%= link_to "Login", "/auth/identity" %></li>
+      <% end %>	
+      </ul>
     </div>
-    </div>
-
-
-
-<%= yield %>
-
-<hr>
-
-      <div class="footer">
-        <p>El sito Web creado por una ardilla.</p>
-      </div>
-
+  </div>
+  <%= yield %>
+  <hr>
+  <div class="footer">
+    <p>El sito Web creado por una ardilla.</p>
+  </div>
 </div>
 </body>
 </html>

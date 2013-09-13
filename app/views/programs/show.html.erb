@@ -1,17 +1,12 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  
-  <%= @program.name %>
-</p>
-<p>
+<h3><%= @program.name %></h3>
 
 <% if @program.has_photo? %>
   <%= image_tag @program.photo_path %>
 <% else %>
   No photo.
 <% end %>
-</p>
+
 
 <%= link_to 'Edit', edit_program_path(@program), class: "btn btn-primary" %> 
 
