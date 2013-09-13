@@ -7,9 +7,9 @@
   No photo.
 <% end %>
 
-
+<% if logged_in? && authorized? %> 
 <%= link_to 'Edit', edit_program_path(@program), class: "btn btn-primary" %> 
-
+<% end %>
 <%= link_to 'Episodes', program_episodes_path(@program), class: "btn btn-primary" %> 
 
 <%= link_to 'Back', programs_path, class: "btn btn-primary" %>

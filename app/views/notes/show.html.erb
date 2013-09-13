@@ -10,6 +10,7 @@
   <%= @note.episode_id %>
 </p>
 
-
-<%= link_to 'Edit', edit_program_episode_note_path(@program, @episode, @note), class: "btn btn-primary" %> 
+<% if logged_in? && authorized? %> 
+  <%= link_to 'Edit', edit_program_episode_note_path(@program, @episode, @note), class: "btn btn-primary" %> 
+<% end %>
 <%= link_to 'Back', program_episode_notes_path(@program, @episode), class: "btn btn-primary" %>

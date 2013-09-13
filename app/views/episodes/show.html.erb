@@ -20,9 +20,9 @@
   <%= @episode.synopsis %>
 </p>
 
-
-<%= link_to 'Edit', edit_program_episode_path(@program, @episode), class: "btn btn-primary" %> 
-
+<% if logged_in? && authorized? %> 
+  <%= link_to 'Edit', edit_program_episode_path(@program, @episode), class: "btn btn-primary" %> 
+<% end %>
 <%= link_to 'Notes', program_episode_notes_path(@program, @episode), class: "btn btn-primary" %> 
 
 <%= link_to 'Back', program_episodes_path(@program), class: "btn btn-primary" %>
