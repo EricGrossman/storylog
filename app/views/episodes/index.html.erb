@@ -33,7 +33,7 @@
 
 <br />
 <% else %>
-  <p>There are no <%= @program.name %> episodes.</p>
+  <p>There are no episodes of <%= @program.name %>.</p>
 <% end %>
 <% if logged_in? && authorized? %>
 <%= link_to 'New Episode', new_program_episode_path, class: "btn btn-primary" %> 
