@@ -2,7 +2,7 @@
 <h3><%= @program.name %></h3>
 
 <%= image_tag @program.photo.url %>
-<br/>
+<br/><br/>
 
 <% if logged_in? && authorized? %> 
 <%= link_to 'Edit', edit_program_path(@program), class: "btn btn-primary" %> 
