@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 <h3><%= @program.name %></h3>
 
-  <%= image_tag @program.photo.url %>
-
+<%= image_tag @program.photo.url %>
+<br/>
 
 <% if logged_in? && authorized? %> 
 <%= link_to 'Edit', edit_program_path(@program), class: "btn btn-primary" %> 

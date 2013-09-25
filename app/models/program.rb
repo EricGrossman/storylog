@@ -1,10 +1,7 @@
 class Program < ActiveRecord::Base
   
   attr_accessible :name, :photo
-  attr_accessor :photo_file_name
-  attr_accessor :photo_content_type
-  attr_accessor :photo_file_size
-  attr_accessor :photo_updated_at
+
   #A Program has many Episodes.
   #If a Program is deleted, delete its Episodes.
   has_many :episodes, :dependent => :destroy
