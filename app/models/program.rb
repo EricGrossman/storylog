@@ -17,9 +17,7 @@ class Program < ActiveRecord::Base
   #Create path to Rails' public directory
   PHOTO_STORE = File.join Rails.root, 'public', 'photo_store'
   
-  has_attached_file :photo, 
-                    :url => "https://s3.amazonaws.com/StorylogBucket/app/public/assets/photo_store/:basename.:extension",
-					:path => ":rails_root/public/assets/photo_store/:basename.:extension"
+  has_attached_file :photo
   validates_attachment_presence :photo
   validates_attachment_size :photo, :less_than => 5.megabytes
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
