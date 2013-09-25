@@ -18,7 +18,7 @@ class Program < ActiveRecord::Base
   PHOTO_STORE = File.join Rails.root, 'public', 'photo_store'
   
   has_attached_file :photo, 
-                    :url => "/assets/photo_store/:basename.:extension",
+                    :url => "https://s3.amazonaws.com/StorylogBucket/app/public/assets/photo_store/:basename.:extension",
 					:path => ":rails_root/public/assets/photo_store/:basename.:extension"
   validates_attachment_presence :photo
   validates_attachment_size :photo, :less_than => 5.megabytes
