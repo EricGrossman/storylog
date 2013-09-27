@@ -64,3 +64,18 @@ div {
   float: none !important;
 }
 
+.image_carousel {
+	    padding: 15px 0 15px 40px;   
+	}
+	.image_carousel img {
+	    border: 1px solid #ccc;
+	    background-color: white;
+    padding: 9px;
+    margin: 7px;
+	    display: block;
+	    float: left;
+	}
+	.clearfix {
+	    float: none;
+	    clear: both;
+	}

@@ -1,15 +1,34 @@
-
-<div class="slider-wrapper theme-default"> 
-    <div class="ribbon"></div> 
-    <div id="slider" class="nivoSlider"> 
-    <img src="nemo.jpg" alt="Nemo" title="This is an example of a caption" />
-    <img src="up.jpg" alt="Up" title="This is an example of a caption" />
-    <img src="toystory.jpg" alt="Toy Story" title="This is an example of a caption" />
-    <img src="walle.jpg" alt="WALL-E" title="this is an example of a caption"/>
-    </div> 
-</div>
-
-
+<div class="list_carousel">
+				<div id="foo1">
+					<img src="c1copy.png" alt="Nemo" />
+				    <img src="c9copy.png" alt="Nemo" />
+					<img src="c3copy.png" alt="Nemo" />
+					<img src="c4copy.png" alt="Nemo" />
+					<img src="c14copy.png" alt="Nemo" />
+					<img src="c15copy.png" alt="Nemo" />
+					<img src="c6copy.png" alt="Nemo" />
+					<img src="c7copy.png" alt="Nemo" />
+					<img src="c12copy.png" alt="Nemo" />
+					<img src="c17copy.png" alt="Nemo" />
+					<img src="c8copy.png" alt="Nemo" />					
+					<img src="c10copy.png" alt="Nemo" />
+					<img src="c22copy.png" alt="Nemo" />
+					
+					<img src="c24copy.png" alt="Nemo" />
+					<img src="c5copy.png" alt="Nemo" />
+					<img src="c25copy.png" alt="Nemo" />
+					<img src="c21copy.png" alt="Nemo" />
+					<img src="c11copy.png" alt="Nemo" />					
+					<img src="c13copy.png" alt="Nemo" />					
+					
+					<img src="c18copy.png" alt="Nemo" />
+					<img src="c2copy.png" alt="Nemo" />
+					<img src="c19copy.png" alt="Nemo" />
+					<img src="c20copy.png" alt="Nemo" />
+					<img src="c23copy.png" alt="Nemo" />
+				</div>
+				<div class="clearfix"></div>
+			</div>
 
 <div class="row"><div class="span12">
 <table class="table table-hover center-table">
@@ -42,7 +61,8 @@
 <%= link_to 'New Program', new_program_path, class: "btn btn-primary" %>
 <% end %>
 <script type="text/javascript">
-$(window).load(function() {
-    $('#slider').nivoSlider({effect: 'fade', navDirection:true});
+$(window).load(function() {    
+	$("#foo1").carouFredSel();
+	
 });
 </script>

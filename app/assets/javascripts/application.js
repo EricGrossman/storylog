@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
-//= require nivo
 //= require global_disable
+//= require carousel
