@@ -15,7 +15,7 @@
 	  <%= link_to 'Story Log', programs_path, class: "brand" %>
       
       <ul class="nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li><%= link_to 'Home', programs_path %></li>
       <li><a href="http://ericgrossman.github.io/storylog/">About</a></li>
       <li><a href="mailto:mail@eric-grossman.net">Contact</a></li>
       <% if current_user %>			  
@@ -29,7 +29,12 @@
   <%= yield %>
   <hr>
   <div class="footer">
-    <p>El sito Web creado por una ardilla.</p>
+    
+	<div class="span4 offset4 text-center">
+	<p>El sito Web creado por una ardilla.</p>
+	<%= image_tag("rails.png", :alt => "Ruby on Rails") %>
+	</div>
+
   </div>
 </div>
 </body>
