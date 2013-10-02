@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
     if session["user_id"] && current_user
 	  #Assumed that the first 2 users are me...Hack.
 	  #I'm learning.
-	  if current_user.uid.to_i < 3
+	  if current_user.admin?
 	    return true
 	  else
 	    return false
