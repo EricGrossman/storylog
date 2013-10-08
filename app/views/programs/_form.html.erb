@@ -23,7 +23,7 @@
   
   <div class="actions">
     <% if logged_in? && authorized? %>
-    <%= f.submit %>
+    <%= f.submit 'Create Program', :class => 'btn btn-primary'%>
 	<% end %>
   </div>
 <% end %>

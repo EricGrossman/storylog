@@ -30,7 +30,7 @@
   </div>
   <div class="actions">
     <% if logged_in? && authorized? %>
-    <%= f.submit %>
+    <%= f.submit 'Create Episode', :class => 'btn btn-primary'%>
 	<% end %>
   </div>
 <% end %>
