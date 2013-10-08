@@ -1,11 +1,12 @@
 <%= form_for(@program, :html => {:multipart => true}) do |f| %>
   <% if @program.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@program.errors.count, "error") %> prohibited this program from being saved:</h2>
-
+	<div class="alert alert-error">
+      <%= pluralize(@program.errors.count, "error") %> prohibited this program from being saved:
+    </div>
       <ul>
       <% @program.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <li>* <%= msg %></li>
       <% end %>
       </ul>
     </div>

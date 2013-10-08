@@ -1,11 +1,12 @@
 <%= form_for([@program, @episode]) do |f| %>
   <% if @episode.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@episode.errors.count, "error") %> prohibited this episode from being saved:</h2>
-
+	<div class="alert alert-error">
+      <%= pluralize(@episode.errors.count, "error") %> prohibited this episode from being saved:
+    </div>
       <ul>
       <% @episode.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <li>* <%= msg %></li>
       <% end %>
       </ul>
     </div>
